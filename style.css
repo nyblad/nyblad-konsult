@@ -11,10 +11,8 @@ body {
 
 h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
-  text-transform: lowercase;
-  margin: 5px 0;
-  font-size: 40px;
+  font-size: 38px;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -22,11 +20,10 @@ h2 {
   padding: 5px;
   display: inline-block;
   text-transform: uppercase;
-  background: #5C1333;
+  background: #003049;
   color: #FFF;
   font-size: 22px;
   font-weight: 700;
-  margin: 0 0 30px 0;
 }
 
 h3 {
@@ -34,7 +31,7 @@ h3 {
   font-size: 19px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #5C1333;
+  color: #003049;
 }
 
 h4 {
@@ -42,7 +39,7 @@ h4 {
   font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #5C1333;
+  color: #003049;
   margin: 10px 0;
 }
 
@@ -61,12 +58,12 @@ a {
 /* ACCESSABILITY STYLING */
 
 :focus {
-  outline: 2px solid #5C1333;
+  outline: 2px solid #003049;
   outline-offset: 3px;
   border-radius: 5px;
 }
 
-.header-links-tab:focus, .email:focus, .credit:focus {
+.header-links-tab:focus, .email:focus{
   outline: 2px solid #FFF;
   outline-offset: 3px;
   border-radius: 5px;
@@ -74,22 +71,26 @@ a {
 
 /* STYLING FOR HEADER */
 header {
-  background: #4C5B5C;
-  background-image: url('assets/wallpaper_700.jpg');
-  background-size: cover;
-  background-position: top left;
+  background:#61666B;
   color: #FFF;
-  height: 500px;
+  height: 50vh;
 }
 
 .header-wrapper {
-  max-width: 1100px;
+  width: 100%;
   position: relative;
   margin: 0 auto;
 }
+.header-content {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.header-links {
-  position: absolute; /*relative to html since parent has a static position*/
+/* .header-links {
+  position: absolute; 
   top: 70px;
   right: 10%;
   padding: 30px 10px;
@@ -123,50 +124,27 @@ header {
   left: 10%;
 }
 
-header h4 {
-  color: #FFF;
-  letter-spacing: 1.2px;
-  font-size: 13px;
-  font-weight: 300;
-  margin: 5px 0;
-}
-
-.highlight {
-  font-weight: 700;
-}
-
 header h3 {
   color: #FFF;
   text-transform: lowercase;
   margin-top: 0;
-}
-
-/* STYLING FOR PROFILE IMAGE */
-/* @-webkit-keyframes slide {
-  100% { right: 10%; }
-}
-
-@keyframes slide {
-  100% { right: 10%; }
 } */
 
 figure {
-  width: 160px; 
+  width: 130px;
+  height: 130px;
   position: absolute; 
   margin: 0;
-  top: 360px;
+  top: 30vh;
   right: 10%;
-  /* right: -50%;
-  animation: slide 0.7s forwards;
-  animation-delay: 0.5s;
-  -webkit-animation: slide 0.7s forwards;
-  -webkit-animation-delay: 0.5s; */
 }
 
 .profile-img {
   width: 100%;
+  height: 100%;
   border: 3px solid #FFF;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 /* STYLING FOR MAIN SECTIONS */
@@ -177,36 +155,20 @@ main {
 }
 
 .wrapper-grey {
-  background: #F4F2F0;
+  background: #EAEBEC;
 }
 
-.summary, .tech, .featured-projects, .other-projects, .my-thoughts, .more-thoughts, .skills, .more {
+.summary {
+  height: 50vh;
   padding: 50px 10%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.more {
-  max-width: 900px;
-}
-
-/* SLIDE IN EFFECT ON P SECTIONS*/
-.slide-in {
-  opacity: 0;
-  transition: all 1s;
-}
-
-.left.slide-in {
-  transform: translateX(-50%) scale(0.95);
-}
-
-.right.slide-in {
-  transform: translateX(50%) scale(0.95);
-}
-
-.slide-in.active {
-  opacity: 1;
-  transform: translateX(0%) scale(1);
+.companyinfo {
+  padding: 50px 10%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* STYLING FOR SUMMARY */
@@ -217,8 +179,8 @@ main {
 
 .line-dot {
   height: 3px;
-  width: 50px;
-  background: #5C1333;
+  width: 40px;
+  background: #003049;
   position: relative;
   float:left;
   top: 12px;
@@ -234,244 +196,43 @@ main {
   top: -3px;
   right: -1px;
   border-radius: 50%;
-  background: #5C1333;
+  background: #003049;
 }
 
-/* STYLING FOR TECH */
-.tech p {
+/* STYLING FOR COMPANY INFO */
+.companyinfo p {
   font-family: 'Montserrat', sans-serif;
-}
-
-/* STYLING FOR PROJECTS */
-.projects-flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  position: relative; /* Needs position realtive for title to be absolute to card*/
-  text-align: left;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.project-card-title {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 18px;
-  color: #FFF;
-  position: absolute; /*relative to its old position*/
-  align-self: center;
-  top: 25%;
-}
-
-.project-card-img {
-  background-size: cover;
-  background-position: center center;
-  box-shadow: inset 0 0 0 100vmax rgba(56, 52, 56, 0.8);
-  border-radius: 3px;
-  width: 100%;
-  height: 180px;
-}
-
-.project-card-text {
-  margin: 15px 0;
-  color: #000;
-  font-size: 17px;
-  line-height: 1.5;
-}
-
-.text-h {
-  color: #5C1333;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.project-card-tags {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.tag {
-  padding: 3px 6px;
-  display: inline-block;
-  background: #E7D5DD;
-  color: #111111;
-  margin-right: 5px;
-  font-size: 12px;
-}
-
-.other-projects {
-  padding-top: 0; 
-}
-
-.other-project-card {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-/* STYLING FOR THOUGHTS */
-.thoughts-flex {
-  margin-top: 10px;
-}
-
-.thought-card {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-bottom: 30px;
-}
-
-.thought-card p {
-  font-size: 17px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.thought-card-img {
-  background-size: cover;
-  background-position: center;
-  border-radius: 3px;
-  width: 100%;
-  height: 180px;
-  margin-bottom: 10px;
-}
-
-.thought-headline {
-  color: #000;
-  font-size: 21px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.thought-card-text {
-  margin: 15px 0;
-  color: #000;
-  font-size: 17px;
-  line-height: 1.5;
-  margin: 5px 0 15px 0;
-}
-
-.more-thoughts {
-  padding-top: 0; 
-}
-
-.more-thoughts-card {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.more-thoughts-text{
-  font-size: 17px;
-  line-height: 1.5;
-}
-
-/* STYLING FOR SKILLS */
-
-.skill-box-outer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  justify-content: space-between;
-}
-
- ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0 15px 0;
- }
-
- li {
-   font-size: 17px;
-   line-height: 1.5;
- }
-
- /* STYLING FOR MORE BUTTONS */
-.more-links-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 15px;
-}
-
-.more-links {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.more-links-wrapper p {
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #5C1333;
-  font-weight: 700;
-  margin-top: 10px;
-}
-
- .btn-more {
-  border: 3px solid #5C1333;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.btn-more-img {
-  width: 32px;
 }
 
 /* STYLING FOR FOOTER */
 footer {
   margin: 0;
-  background: #4E6365;
-  color: #FFF;
+  background: #EAEBEC;
+  /* color: #FFF; */
   text-align: center;
   padding: 30px 0;
   height: 10%;
 }
 
-footer h3 {
-  color: #FFF;
+/* footer h3 {
+  color: #003049;
 }
 
 footer h4, footer p {
   color: #FFF;
   margin: 8px 0;
 }
-
+*/
 .email {
-  color: #FFF;
-}
-
-.credit {
-  font-size: 9px;
-  color: #FFF;
-  margin-top: 10px;
-}
+  color: #000;
+} 
 
 /* STYLING FOR MEDIA QUERY 1 BIG PHONE */
 @media (min-width: 540px) and (max-width: 666px) {
 
-  .header-info {
+  /* .header-info {
     width: 45%;
-  }
+  } */
 
   }
 
@@ -498,10 +259,6 @@ footer h4, footer p {
     font-size: 17px;
   }
 
-  header {
-    background-image: url('assets/wallpaper_1200.jpg');
-  }
-
   .btn {
     width: 80px;
     height: 80px;
@@ -511,58 +268,18 @@ footer h4, footer p {
     width: 24px;
   }
 
-  .header-info {
+  /* .header-info {
     width: 45%;
-  }
+  } */
 
   header h4 {
     font-size: 16px;
   }
 
   figure {
-    width: 220px; 
-    top: 300px;
+    width: 150px; 
+    top: 30vh;
   }
-
-  .projects-flex {
-    flex-direction: row;
-  }
-
-  .project-card {
-    width: 45%;
-  }
-
-  .project-card-img {
-    height: 250px;
-  }
-
-  .tag {
-    font-size: 12px;
-  }
-
-  .thoughts-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .thought-card {
-    width: 45%;
-  }
-
-  .skill-box-inner-left {
-    width: 30%;
-  }
-
-  .skill-box-inner-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 70%;
-  }
-
-  .skill-box {
-    width: 50%;
-  } 
 
   .btn-more {
     width: 80px;
@@ -579,7 +296,7 @@ footer h4, footer p {
 @media (min-width: 1025px) {
 
   h1 {
-    font-size: 70px;
+    font-size: 50px;
   }
 
   h2 {
@@ -598,10 +315,6 @@ footer h4, footer p {
     font-size: 21px;
   }
 
-  header {
-    background-image: url('assets/wallpaper_2000.jpg');
-  }
-
   .btn {
     width: 80px;
     height: 80px;
@@ -616,74 +329,18 @@ footer h4, footer p {
     width: 30px;
   }
 
-  .header-info {
+  /* .header-info {
     width: 37%;
-  }
+  } */
 
   header h4 {
     font-size: 28px;
   }
 
   figure {
-    width: 300px; 
-    top: 250px;
-  }
-
-  .projects-flex {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .project-card {
-    width: 45%;
-  }
-
-  .project-card-img {
-    height: 250px;
-  }
-
-  .project-card-text, .more-thoughts-text {
-    font-size: 20px;
-  }
-
-  .tag {
-    font-size: 14px;
-  }
-
-  .thoughts-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .thought-card {
-    width: 45%;
-  }
-
-  .thought-card p {
-    font-size: 20px;
-  }
-
-  .thought-card-text {
-    font-size: 20px;
-  }
-
-  .skill-box-inner-left {
-    width: 30%;
-  }
-
-  .skill-box-inner-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 70%;
-  }
-
-  .skill-box {
-    width: 50%;
-  } 
-
-  li {
-    font-size: 21px;
+    width: 200px;
+    height: 200px;
+    top: 30vh;
   }
 
   .btn-more {
