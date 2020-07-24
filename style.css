@@ -1,4 +1,4 @@
-/* STYLING IS WORKED BY MOBILE FIRST */
+/* STYLING IS BY MOBILE FIRST UP TO 667PX */
 * {
   box-sizing: border-box;
 }
@@ -6,136 +6,60 @@
 body {
   margin: 0;
   color: #000;
-  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 38px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
-  padding: 5px;
-  display: inline-block;
-  text-transform: uppercase;
-  background: #003049;
-  color: #FFF;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-h3 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 19px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #003049;
-}
-
-h4 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #003049;
-  margin: 10px 0;
+  color: #002133;
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 17px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   line-height: 1.5;
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #A8245F;
+  color: #002133;
 }
 
 /* ACCESSABILITY STYLING */
-
 :focus {
-  outline: 2px solid #003049;
-  outline-offset: 3px;
-  border-radius: 5px;
-}
-
-.header-links-tab:focus, .email:focus{
-  outline: 2px solid #FFF;
+  outline: 2px solid #002133;
   outline-offset: 3px;
   border-radius: 5px;
 }
 
 /* STYLING FOR HEADER */
 header {
-  background:#61666B;
+  background:#002133;
   color: #FFF;
-  height: 50vh;
+  height: 350px;
+  width: 100%;
+  padding: 20px 15px;
 }
 
-.header-wrapper {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
 .header-content {
-  width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 20px;
 }
-
-/* .header-links {
-  position: absolute; 
-  top: 70px;
-  right: 10%;
-  padding: 30px 10px;
-  display: flex;
-  flex-direction: row;
-}
-
-.header-links a {
-  margin-left: 10px;
-}
-
-.btn {
-  border: 3px solid #FFF;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-img {
-  width: 16px;
-}
-
-.header-info {
-  width: 75%;
-  position: absolute; 
-  top: 170px;
-  left: 10%;
-}
-
-header h3 {
-  color: #FFF;
-  text-transform: lowercase;
-  margin-top: 0;
-} */
 
 figure {
   width: 130px;
   height: 130px;
   position: absolute; 
   margin: 0;
-  top: 30vh;
+  top: 260px;
   right: 10%;
 }
 
@@ -147,40 +71,21 @@ figure {
   object-fit: cover;
 }
 
-/* STYLING FOR MAIN SECTIONS */
-main {
+/* STYLING FOR MAIN SECTION */
+.companyinfo {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-.wrapper-grey {
-  background: #EAEBEC;
-}
-
-.summary {
-  height: 50vh;
-  padding: 50px 10%;
+  padding: 50px 10% 30px 10%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.companyinfo {
-  padding: 50px 10%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* STYLING FOR SUMMARY */
-.summary p {
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
-}
-
+/* STYLING FOR LINE DOTS */
 .line-dot {
   height: 3px;
   width: 40px;
-  background: #003049;
+  background: #004266;
   position: relative;
   float:left;
   top: 12px;
@@ -196,169 +101,75 @@ main {
   top: -3px;
   right: -1px;
   border-radius: 50%;
-  background: #003049;
-}
-
-/* STYLING FOR COMPANY INFO */
-.companyinfo p {
-  font-family: 'Montserrat', sans-serif;
+  background: #004266;
 }
 
 /* STYLING FOR FOOTER */
 footer {
   margin: 0;
   background: #EAEBEC;
-  /* color: #FFF; */
   text-align: center;
   padding: 30px 0;
-  height: 10%;
 }
 
-/* footer h3 {
-  color: #003049;
-}
-
-footer h4, footer p {
-  color: #FFF;
-  margin: 8px 0;
-}
-*/
-.email {
-  color: #000;
-} 
-
-/* STYLING FOR MEDIA QUERY 1 BIG PHONE */
-@media (min-width: 540px) and (max-width: 666px) {
-
-  /* .header-info {
-    width: 45%;
-  } */
-
-  }
-
-/* STYLING FOR MEDIA QUERY 2 TABLET */
-@media (min-width: 667px) and (max-width: 1024px) {
+/* STYLING FOR TABLET */
+@media (min-width: 667px) and (max-width: 900px) {
 
   h1 {
-    font-size: 58px;
+    font-size: 42px;
   }
 
   h2 {
-    font-size: 32px;
-  }
-
-  h3 {
     font-size: 25px;
-  }
-
-  h4 {
-    font-size: 20px;
   }
 
   p {
     font-size: 17px;
   }
 
-  .btn {
-    width: 80px;
-    height: 80px;
-  }
-
-  .btn-img {
-    width: 24px;
-  }
-
-  /* .header-info {
-    width: 45%;
-  } */
-
-  header h4 {
-    font-size: 16px;
+  header {
+    padding: 20px 70px;
   }
 
   figure {
-    width: 150px; 
-    top: 30vh;
-  }
-
-  .btn-more {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .btn-more-img {
-    width: 48px;
+    width: 150px;
+    height: 150px;
+    top: 250px;
   }
   
 }
 
-/* STYLING FOR MEDIA QUERY 3 DESKTOP */
-@media (min-width: 1025px) {
+/* STYLING FOR DESKTOP */
+@media (min-width: 900px) {
 
   h1 {
     font-size: 50px;
   }
 
   h2 {
-    font-size: 33px;
-  }
-
-  h3 {
     font-size: 30px;
-  }
-
-  h4 {
-    font-size: 23px;
   }
 
   p {
     font-size: 21px;
   }
 
-  .btn {
-    width: 80px;
-    height: 80px;
+  header {
+    padding: 20px 120px;
   }
 
-  .btn-img {
-    width: 24px;
-    transition: width 0.4s;
-  }
-
-  .btn:hover .btn-img {
-    width: 30px;
-  }
-
-  /* .header-info {
-    width: 37%;
-  } */
-
-  header h4 {
-    font-size: 28px;
+  .header-content {
+    padding-top: 0px;
   }
 
   figure {
     width: 200px;
     height: 200px;
-    top: 30vh;
+    top: 210px;
   }
 
-  .btn-more {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .btn-more-img {
-    width: 48px;
-    transition: width 0.4s;
-  }
-
-  .btn-more:hover .btn-more-img {
-    width: 54px;
-  }
-
-  .more-links-wrapper p {
-    font-size: 17px;
+  .companyinfo {
+    padding: 50px 10%;
   }
 
 }
