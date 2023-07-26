@@ -123,13 +123,13 @@ figure {
 
 /* STYLING FOR FOOTER */
 footer {
-  padding: 30px 0;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: darkgrey;
+  background-color: #595959;
 }
 
 /* STYLING FOR TABLET */
