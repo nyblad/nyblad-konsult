@@ -19,61 +19,101 @@ h2 {
   font-size: 19px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #002133;
+  color: #292929;
 }
 
 p {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.2;
+  margin: 10px 0px;
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #002133;
+  color: #292929;
+}
+
+.text-light {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 10px 0px;
+  color: #E0E0E0;
+}
+
+li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 10px 0px;
+  color: #E0E0E0;
 }
 
 /* ACCESSABILITY STYLING */
 :focus {
-  outline: 2px solid #002133;
+  outline: 2px solid #292929;
   outline-offset: 3px;
   border-radius: 5px;
 }
 
 /* STYLING FOR HEADER */
 header {
-  background:#002133;
-  color: #FFF;
-  height: 350px;
+  background:#292929;
+  color: #FDFFFC;
+  height: 290px;
   width: 100%;
   padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-content {
-  padding-top: 20px;
+  padding-top: 0px;
 }
 
 figure {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   position: absolute; 
+  top: 210px;
   margin: 0;
-  top: 260px;
-  right: 10%;
+}
+
+.figure-right {
+  right: 5%;
+}
+
+.figure-left {
+  left: 5%;
 }
 
 .profile-img {
   width: 100%;
   height: 100%;
-  border: 3px solid #FFF;
+  border: 3px solid #FDFFFC;
   border-radius: 50%;
   object-fit: cover;
 }
 
+.figure-textblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -3px;
+}
+
+.figure-text {
+  color: #292929;
+  font-size: 10px;
+  margin: 0px 0px;
+}
+
 /* STYLING FOR MAIN SECTION */
 .companyinfo {
-  background-color: white;
+  background-color: #FDFFFC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,10 +142,10 @@ figure {
 .line-dot {
   height: 3px;
   width: 40px;
-  background: #004266;
+  background: #595959;
   position: relative;
   float:left;
-  top: 12px;
+  top: 10px;
   margin-right: 10px;  
 }
 
@@ -118,12 +158,11 @@ figure {
   top: -3px;
   right: -1px;
   border-radius: 50%;
-  background: #004266;
+  background: #595959;
 }
 
 /* STYLING FOR FOOTER */
 footer {
-  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,16 +187,29 @@ footer {
   }
 
   header {
+    height: 320px;
     padding: 20px 70px;
   }
 
   figure {
     width: 150px;
     height: 150px;
-    top: 250px;
+    top: 220px;
   }
 
+  .figure-right {
+    right: 10%;
+  }
   
+  .figure-left {
+    left: 10%;
+  }
+
+  .figure-text {
+    color: #292929;
+    font-size: 12px;
+    margin: 3px 0px;
+  }
   
 }
 
@@ -178,6 +230,7 @@ footer {
   }
 
   header {
+    height: 360px;
     padding: 20px 120px;
   }
 
@@ -188,7 +241,34 @@ footer {
   figure {
     width: 200px;
     height: 200px;
-    top: 210px;
+    top: 240px;
+  }
+
+  .figure-right {
+    right: 10%;
+  }
+  
+  .figure-left {
+    left: 10%;
+  }
+
+  .figure-text {
+    color: #292929;
+    font-size: 12px;
+    margin: 3px 0px;
+  }
+
+}
+
+/* STYLING FOR LARGE DESKTOP */
+@media (min-width: 1200px) {
+
+  .figure-right {
+    right: 15%;
+  }
+  
+  .figure-left {
+    left: 15%;
   }
 
 }
