@@ -98,6 +98,11 @@ figure {
   object-fit: cover;
 }
 
+.logo-img {
+  width: 200px;
+  object-fit: contain;
+}
+
 .figure-textblock {
   display: flex;
   flex-direction: column;
@@ -139,6 +144,11 @@ figure {
 }
 
 /* STYLING FOR LINE DOTS */
+.line-dot-wrapper {
+  padding-top: 0px;
+  margin-top: 10px;
+}
+
 .line-dot {
   height: 3px;
   width: 40px;
@@ -230,12 +240,19 @@ footer {
   }
 
   header {
-    height: 360px;
-    padding: 20px 120px;
+    height: 340px;
+    padding: 30px 120px 20px 120px;
   }
 
   .header-content {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .line-dot-wrapper {
     padding-top: 0px;
+    margin-top: 0px;
+    margin-left: 40px;
   }
 
   figure {
