@@ -171,6 +171,108 @@ figure {
   background: #595959;
 }
 
+/* STYLING FOR GALLERY / CAROUSEL */
+.gallery {
+  background-color: #FDFFFC;
+  padding: 0 20px 20px;
+}
+
+.companyinfo .textblock {
+  padding-bottom: 30px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 12px;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  flex-shrink: 0;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(41, 41, 41, 0.55);
+  color: #FDFFFC;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: rgba(41, 41, 41, 0.85);
+}
+
+.carousel-btn:focus {
+  outline: none;
+}
+
+.carousel-btn--prev { left: 10px; }
+.carousel-btn--next { right: 10px; }
+
+.carousel-btn img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #c0c0c0;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.carousel-dot.active {
+  background: #292929;
+}
+
+@media (min-width: 667px) {
+  .carousel-track img {
+    height: 280px;
+  }
+}
+
+@media (min-width: 900px) {
+  .carousel-track img {
+    height: 260px;
+  }
+}
+
 /* STYLING FOR FOOTER */
 footer {
   display: flex;
